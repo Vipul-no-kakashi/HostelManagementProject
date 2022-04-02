@@ -1,4 +1,5 @@
 var gallery = document.querySelector('#gallery');
+
 var getVal = function (elem, style) { return parseInt(window.getComputedStyle(elem).getPropertyValue(style)); };
 var getHeight = function (item) { return item.querySelector('.content').getBoundingClientRect().height; };
 var resizeAll = function () {

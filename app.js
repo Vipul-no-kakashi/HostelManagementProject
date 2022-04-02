@@ -11,7 +11,15 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 app.get("/",function(req,res){
-    res.render("images");
+    res.render("home");
+})
+
+app.get("/gallery",function(req,res){
+    res.render("gallery");
+})
+
+app.get("/booking",function(req,res){
+    res.render("booking");
 })
 
 app.listen(3000, function() {
