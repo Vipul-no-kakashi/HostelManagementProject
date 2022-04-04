@@ -1,20 +1,366 @@
-<!-- <h1>How to Book the Hostel</h1>
-<h2>For availing accommodation facilities for a family the following procedure should be followed:</h2>
-<ol>
-    <li><span class="type" style="--n:10000">
-        A mail should be sent to Hall office on hostel@iiti.ac.in a minimum of 5 days prior to the desired accommodation. A Cc should be marked to Chief warden and concern Hall warden ( which is already been shared with you).
-    
-    </span></li>
-    <li><span class="type" style="--n:10000">
-        Mail should clearly specify the purpose of visit, arrival and departure date of guest with his/her name.
-    </span></li>
-    <li><span class="type" style="--n:10000">
-        On getting the confirmation, prior payment should be done by clicking on the link shared by Hall Office in confirmation mail (payment on arrival or post-payment will not be entertained).
-    </span></li>
-    <li><span class="type" style="--n:10000">
-        Once the payment is done, the student is required to visit the Accounts & finance department for getting the payment receipt seal and signed.
-    </span></li>
-    <li><span class="type" style="--n:10000">
-        Report Hall office on the arrival of a guest with the receipt.
-    </span></li>
-</ol> -->
+<%- include("partials/mainheader"); -%>
+    <header class="header d-flex justify-content-center">
+        <div class="container">
+            <div class="row h-100 align-items-center">
+                <div class="col-md-7">
+                    <div class="header-content">
+                        <h3 class="header-title"><strong class="text-primary">IIT Indore </strong><span class="text-light"></span></h3>
+                        <h4 class="header-subtitle">Welcome to the Portal of Hall of Residences</h4>
+                        <p id="header-main-text">A one place solution to anything related to Hall of Residences, whether its payment of accomodation charges, or query redresal, etc.</p>
+                        <button class="btn btn-outline-light btn-flat">Discover More</button>
+                    </div>  
+                </div>
+              <!--  <div class="col-md-5 d-none d-md-block">
+                    <form class="header-form">
+                        <div class="head">Try your <span class="text-primary">Free</span> trial today.</div>
+                        <div class="body">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Name*">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Email*">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" placeholder="Password*">
+                            </div>
+                        </div>
+                        <div class="footer">
+                            <button class="btn btn-primary btn-block">Get Started</button>
+                        </div>
+                    </form> 
+                </div> -->
+            </div>  
+        </div>
+    </header>
+    <div class="social-wrapper" id="features">
+        <div class="container">
+            <div class="social-txt">
+                <h6 class="title">Social Media</h6>
+                <p class="subtitle">Youc can also reach out to us on these platforms.</p>
+            </div>
+            <div class="social-links">
+                <a href="javascript:void(0)" class="link"><i class="ti-facebook">Facebook</i></a>
+                <a href="javascript:void(0)" class="link"><i class="ti-twitter-alt">Twitter</i></a>
+                <a href="javascript:void(0)" class="link"><i class="ti-google">Gmail</i></a>
+            </div>
+        </div>          
+    </div>
+    <section class="section">
+        <div class="container">
+            <div class="row justify-content-around">
+                <div class="col-lg-8">
+                    <div class="tabs-container">
+                        <ul class="nav tab-nav" id="pills-tab">
+                            <li class="item">
+                                <a class="link active" id="pills-APJ-tab" data-toggle="pill" href="#pills-APJ"aria-selected="true" onclick="uploadImage('assets/imgs/Hostels/apjkalam.jpg');">APJ</a>
+                            </li>
+                            <li class="item">
+                                <a class="link" id="pills-CVR-tab" data-toggle="pill" href="#pills-CVR"aria-selected="false" onclick="uploadImage('assets/imgs/Hostels/cv (1).jpg');">CVR</a>
+                            </li>
+                            <li class="item">
+                                <a class="link" id="pills-DA-tab" data-toggle="pill" href="#pills-DA"aria-selected="false" onclick="uploadImage('assets/imgs/Hostels/devi.jpg');">DA</a>
+                            </li>
+                            <li class="item">
+                                <a class="link" id="pills-HJB-tab" data-toggle="pill" href="#pills-HJB"aria-selected="false" onclick="uploadImage('assets/imgs/Hostels/hjb.jpg');">HJB</a>
+                            </li>
+                            <li class="item">
+                                <a class="link" id="pills-VSB-tab" data-toggle="pill" href="#pills-VSB"aria-selected="false" onclick="uploadImage('assets/imgs/Hostels/vsb.png');">VSB</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="pills-APJ">
+                                <h4 class="title">A.P.J ABDUL KALAM H.O.R</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam repellendus esse consectetur possimus voluptatem veniam quas ducimus ullam deleniti? Possimus, unde eveniet suscipit perspiciatis dicta numquam voluptate fuga id, optio.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit tempore molestiae excepturi commodi ullam provident, optio dicta, nulla officiis consectetur soluta et officia neque odio blanditiis aspernatur cum cumque error?</p>
+
+                                <button class="btn btn-primary mt-3">View More</button>
+                            </div>
+                            <div class="tab-pane fade" id="pills-CVR">
+                                <h4 class="title">C.V RAMAN H.O.R</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit unde totam nostrum, sunt accusamus in delectus aspernatur, nisi eligendi ipsum eum! Aspernatur recusandae nihil rem qui quam vero, saepe inventore tempora? Necessitatibus corporis, nam minus reiciendis rerum? Eius voluptatem facilis, vitae minima modi corrupti ullam, temporibus vel eum fugit inventore obcaecati provident ratione, ab aliquid perspiciatis commodi, autem in nemo.</p>
+                                <p><strong>Lorem ipsum dolor sit amet, consectetur adipisicing.</strong></p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit tempore molestiae excepturi commodi ullam provident, optio dicta, nulla officiis consectetur soluta et officia neque odio blanditiis aspernatur cum cumque error?</p>
+                           
+                                <button class="btn btn-primary mt-3">View More</button>
+                            </div>
+                            <div class="tab-pane fade" id="pills-DA">
+                                <h4 class="title">DEVI AHILYA H.O.R </h4>
+                                <p>Consectetur amet architecto, temporibus, debitis impedit dolore eius. Enim alias beatae architecto iusto incidunt pariatur reprehenderit impedit ipsum ex at deserunt, inventore corrupti rerum eius obcaecati. Itaque repellendus illum aut beatae ex quasi doloremque voluptatem. Numquam at possimus, obcaecati, voluptas aut vel nam recusandae pariatur error illum quaerat sunt! Ipsam rerum enim hic atque nemo debitis, voluptate obcaecati inventore culpa. Odit adipisci eos natus fugiat. Id, deserunt qui aliquam? Provident tempora repellat, repellendus consequatur quia dolor at dolore temporibus esse in rem ea necessitatibus quo nesciunt eos a dolorum voluptates, tenetur non eius quasi! Autem provident amet, maiores tenetur, eveniet dicta, laborum odio velit sint consequatur beatae nemo at! Aperiam magnam eveniet rerum, optio consequuntur quas maiores ullam necessitatibus nesciunt.</p>
+                            
+                                <button class="btn btn-primary mt-3">View More</button>
+                            </div>
+                            <div class="tab-pane fade" id="pills-HJB">
+                                <h4 class="title">HOMI JAHANGIR BHABHA H.O.R</h4>
+                                <p>Consectetur amet architecto, temporibus, debitis impedit dolore eius. Enim alias beatae architecto iusto incidunt pariatur reprehenderit impedit ipsum ex at deserunt, inventore corrupti rerum eius obcaecati. Itaque repellendus illum aut beatae ex quasi doloremque voluptatem. Numquam at possimus, obcaecati, voluptas aut vel nam recusandae pariatur error illum quaerat sunt! Ipsam rerum enim hic atque nemo debitis, voluptate obcaecati inventore culpa. Odit adipisci eos natus fugiat. Id, deserunt qui aliquam? Provident tempora repellat, repellendus consequatur quia dolor at dolore temporibus esse in rem ea necessitatibus quo nesciunt eos a dolorum voluptates, tenetur non eius quasi! Autem provident amet, maiores tenetur, eveniet dicta, laborum odio velit sint consequatur beatae nemo at! Aperiam magnam eveniet rerum, optio consequuntur quas maiores ullam necessitatibus nesciunt.</p>
+                            
+                                <button class="btn btn-primary mt-3">View More</button>
+                            </div>
+                            <div class="tab-pane fade" id="pills-VSB">
+                                <h4 class="title">VIKRAM SARABHAI H.O.R </h4>
+                                <p>Consectetur amet architecto, temporibus, debitis impedit dolore eius. Enim alias beatae architecto iusto incidunt pariatur reprehenderit impedit ipsum ex at deserunt, inventore corrupti rerum eius obcaecati. Itaque repellendus illum aut beatae ex quasi doloremque voluptatem. Numquam at possimus, obcaecati, voluptas aut vel nam recusandae pariatur error illum quaerat sunt! Ipsam rerum enim hic atque nemo debitis, voluptate obcaecati inventore culpa. Odit adipisci eos natus fugiat. Id, deserunt qui aliquam? Provident tempora repellat, repellendus consequatur quia dolor at dolore temporibus esse in rem ea necessitatibus quo nesciunt eos a dolorum voluptates, tenetur non eius quasi! Autem provident amet, maiores tenetur, eveniet dicta, laborum odio velit sint consequatur beatae nemo at! Aperiam magnam eveniet rerum, optio consequuntur quas maiores ullam necessitatibus nesciunt.</p>
+                            
+                                <button class="btn btn-primary mt-3">View More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-none d-lg-block align-self-top">
+                    <img src="assets/imgs/Hostels/apjkalam.jpg" alt="" class="hostelOnebyOne" id="hostelImage">
+                </div>
+            </div>                  
+        </div>                      
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-md-5 align-self-center mb-4 mb-md-0">
+                    <img src="assets/imgs/img.jpg" alt="" class="shadow w-100">
+                </div>
+                <div class="col-md-6 col-lg-5">
+                    <h6 class="title">AWESOME GALLERY</h6>
+                    <p>Consectetur adipisicing elit. Quam odit odio et neque perferendis perspiciatis magnam hic ut facilis possimus!consectetur adipisicing elit. Impedit repellat ipsam quaerat error odit commodi.</p>
+                    <ul class="list-unstyled mt-4">
+                        <li class="media">
+                            <div class="circle-40 mr-3 mt-1"><i class="ti-camera"></i></div>
+                            <div class="media-body">
+                                <h6 class="mb-2">Photos taken by enthusiastic MysticHues memebers</h6>
+                                <p>Cras sit amet nibh libero, in gravida nulla.</p>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <div class="circle-40 mr-3 mt-1"><i class="ti-face-smile"></i></div>
+                            <div class="media-body">
+                                <h6 class="mb-2">Ful of exuberant images from various events</h6>
+                                <p>Cras in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</p>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <div class="circle-40 mr-3 mt-1"><i class="ti-download"></i></div>
+                            <div class="media-body">
+                                <h6 class="mb-2">Download Upload Images</h6>
+                                <p>Nulla vel metus scelerisque ante sollicitudin. Cras purus odio.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section> 
+ <!--   <section class="section">
+        <div class="container">
+            <div class="row justify-content-between">               
+                <div class="col-md-6 col-lg-5 align-self-center">
+                    <h6 class="title">Standard Picture Section</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio ut voluptatum ipsum. Rerum fuga cumque illo nihil nobis vero ducimus, animi voluptatum nemo facilis quae quia odit accusantium doloremque? Totam.</p>
+                    <p><strong>Adipisicing elit. Quos ad doloribus numquam cum odio dolorem!</strong></p>
+                    <p>Rerum fuga cumque consectetur adipisicing elit. Pariatur quis ipsum facere officiis magni ullam quasi fuga magnam dicta quas.</p>                    
+                </div>
+                <div class="col-md-5 mt-4 mt-md-0">
+                    <img src="assets/imgs/img1.jpg" alt="" class="shadow w-100">
+                </div>
+            </div>
+        </div> 
+    </section> -->
+    <section class="section" id="about">
+        <div class="container text-center">
+            <h6 class="display-4 has-line">WHATS NEW? IMPORTANT UPDATES. </h6>
+            <p class="mb-5 pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="circle-100 mb-3"><i class="ti-bell"></i></div>
+                    <h6 class="title mb-3">NOTIFICATIONS</h6>
+                    <ul class="UpdateList">
+                        <li class="Updatelinks"><a href="GOOGLE"><!---->Hostel Information and Window, Hostel & Course Wise Students Details</a></li>
+                        <li class="Updatelinks"><a href="GOOGLE"><!---->Instructions for Students</a></li>
+                        <li class="Updatelinks"><a href="GOOGLE"><!---->Self Declaration Form</a></li>
+                        <li class="Updatelinks"><a href="GOOGLE"><!---->Arrival Details Form</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <div class="circle-100 mb-3"><i class="ti-pencil"></i></div>
+                    <h6 class="title mb-3">UNDERTAKING</h6>
+                    <ul class="UpdateList">
+                        <li class="Updatelinks"><a href="GOOGLE"><!---->Safety and Security Rules</a></li>
+                        <li class="Updatelinks"><a href="GOOGLE"><!---->Anti-Ragging And Anti-Harassment</a></li>
+                        <li class="Updatelinks"><a href="GOOGLE"><!---->Dining Rules And Regulations</a></li>
+                        <li class="Updatelinks"><a href="GOOGLE"><!---->Policy For Internet Access And Email Usage </a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <div class="circle-100 mb-3"><i class="ti-music"></i></div>
+                    <h6 class="title mb-3">EVENTS</h6>
+                    <ul class="UpdateList">
+                        <li class="Updatelinks"><a href="GOOGLE"><!---->Lakshya (Sports Fest)</a></li>
+                        <li class="Updatelinks"><a href="GOOGLE"><!---->IBCC 3.0 (Cultural Fest)</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section> 
+   <!-- <section class="section" id="pricing">
+        <div class="container text-center">
+            <h6 class="display-4 has-line">WHATS NEW? IMPORTANT UPDATES</h6>
+            <p class="mb-5 pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="row pt-5">
+                <div class="col-lg-4">
+                    <a href="javascript:void(0)" class="pricing-card">
+                        <div class="head">NOTIFICATIONS</div>
+                        <div class="body">
+                            <h1><small>$</small>0</h1>
+                            <p>Free for Life</p>
+                        </div> 
+                        <ul class="list-group">
+                            <li class="list-group-item"><span class="symbol"></span> GB OF SPACE</li>
+                            <li class="list-group-item">10 GB OF BANDWIDTH</li>
+                            <li class="list-group-item">3 WEBSITES</li>
+                            <li class="list-group-item">BASIC CUSTOMIZATION</li>
+                            <li class="list-group-item">WORDPRESS INTEGRATION</li>
+                            <li class="list-group-item">EMAIL SUPPORT</li>
+                        </ul>
+                    </a>
+                </div>
+                <div class="col-lg-4">
+                    <a href="javascript:void(0)" class="pricing-card popular">
+                        <div class="head">UNDERTAKINGS</div>
+                        <div class="body">
+                            <h1><small>$</small>14.99</h1>
+                            <p>Monthly Payment</p>
+                        </div> 
+                        <div class="popular-item">OUR MOST POPULAR</div> 
+                        <ul class="list-group">
+                            <li class="list-group-item"> 5 GB OF SPACE</li>
+                            <li class="list-group-item">50 GB OF BANDWIDTH</li>
+                            <li class="list-group-item">10 WEBSITES</li>
+                            <li class="list-group-item">ADVANCED CUSTOMIZATION</li>
+                            <li class="list-group-item">WORDPRESS INTEGRATION</li>
+                            <li class="list-group-item">EMAIL SUPPORT</li>
+                        </ul>
+                    </a>
+                </div>
+                <div class="col-lg-4">
+                    <a href="javascript:void(0)" class="pricing-card">
+                        <div class="head">EVENTS</div>
+                       <div class="body">
+                            <h1><small>$</small>99</h1>
+                            <p>Monthly Payment</p>
+                        </div> 
+                        <ul class="list-group">
+                            <li class="list-group-item">UNLIMITED OF SPACE</li>
+                            <li class="list-group-item">UNLIMITED BANDWIDTH</li>
+                            <li class="list-group-item">120 WEBSITES</li>
+                            <li class="list-group-item">ADVANCED CUSTOMIZATION</li>
+                            <li class="list-group-item">WORDPRESS INTEGRATION</li>
+                            <li class="list-group-item">EMAIL SUPPORT</li>
+                        </ul>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <section class="section" id="review">
+        <div class="container text-center">
+            <h6 class="display-4 has-line">CHIEF WARDENS AND MANAGERS</h6>
+            <p class="mb-5 pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="row text-left">
+                <div class="col-md-4">
+                    <div class="testmonial">                        
+                        <p class="description"><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, eaque, repellat. Corporis facilis reprehenderit, cupiditate.</i></p>
+                        <div class="media">
+                            <img class="mr-3" src="assets/imgs/Lalit_Borana.jpg" width="60" alt="Generic placeholder image">
+                            <div class="media-body">
+                                <h6 class="title">Dr Lalit Borana</h6>
+                                <p class="text-muted">Chief Warden</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testmonial">                        
+                        <p class="description"><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, eaque, repellat. Corporis facilis reprehenderit, cupiditate.</i></p>
+                        <div class="media">
+                            <img class="mr-3" src="assets/imgs/Photo Neeraj.jpg" width="60" alt="Generic placeholder image">
+                            <div class="media-body">
+                                <h6 class="title">Mr. Neeraj Kumar Soni</h6>
+                                <p class="text-muted">Manager</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testmonial">                        
+                        <p class="description"><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, eaque, repellat. Corporis facilis reprehenderit, cupiditate.</i></p>
+                        <div class="media">
+                            <img class="mr-3" src="assets/imgs/avatar3.jpg" width="60" alt="Generic placeholder image">
+                            <div class="media-body">
+                                <h6 class="title">Emily Roe</h6>
+                                <p class="text-muted">Graphic Designer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>              
+            </div>
+        </div>
+    </section>
+    <section class="section has-img-bg text-center">
+        <div class="container">
+            <h6 class="display-3 has-line">WISH TO GIVE A SUGGESTION</h6>
+            <h5 class="mb-5 font-weight-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, itaque.</h5>
+            <button class="btn btn-outline-light btn-flat">POST SUGGESTION</button>
+        </div>
+    </section>
+    <section class="section" id="contact">
+        <div class="container text-center">
+            <h6 class="display-4 has-line">CONTACT US</h6>
+            <p class="mb-5 pb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+            <form>
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <div class="form-group pb-1">
+                            <input type="text" class="form-control" required placeholder="Name">            
+                        </div>
+                        <div class="form-group pb-1">
+                            <input type="email" class="form-control" required placeholder="Email">          
+                        </div>
+                        <div class="form-group ">
+                            <input type="text" class="form-control" placeholder="Subject">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <textarea name="" id="" cols="" rows="7" class="form-control" required placeholder="Message"></textarea>
+                    </div>
+                </div>
+                <input type="submit" class="btn btn-primary btn-block" value="Send Message">
+            </form>
+        </div>
+    </section>
+    <footer class="footer py-4 bg-dark text-light"> 
+        <div class="container text-center">
+            <p class="mb-4 small">Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a href="#">IIT INDORE</a></p>
+            <div class="social-links">
+                <a href="javascript:void(0)" class="link"><i class="ti-facebook"></i></a>
+                <a href="javascript:void(0)" class="link"><i class="ti-twitter-alt"></i></a>
+                <a href="javascript:void(0)" class="link"><i class="ti-google"></i></a>
+            </div>
+        </div>
+    </footer>
+	
+	<!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+    <!-- bootstrap 3 affix -->
+	<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Rubic js -->
+    <script src="assets/js/rubic.js"></script>
+
+    <script>
+        function uploadImage(path){
+            var imgId = document.getElementById('hostelImage');
+            imgId.src = path;
+        }
+    </script>
+
+</body>
+</html>
