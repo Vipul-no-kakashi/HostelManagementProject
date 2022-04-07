@@ -1,0 +1,79 @@
+<%- include("partials/newheader"); -%>
+    <br><br><br><br>
+    <link rel="stylesheet" href="/css/style.css">
+    <% var hostelName=["APJ","CVR","DA","HJB","VSB"];%>
+    <% var alpha="ABCDE" ;%>
+    <% var floor=["First","Second","Third","Fourth","Fifth","Six"];%>
+    <div class="row">
+    <div class="col-3"></div>
+    <div  class="col-6" >
+        <%= hostelName[0] %>
+            &nbsp Hostel
+    </div>
+    </div>
+    <br>
+    <div class="col-3"></div>
+            <%for(var i=1;i<=5;i++){%>
+         
+                    <div class="row">
+                        <div class="col-3"></div>
+                        <div role="button" class="col-6" data-toggle="collapse" aria-expanded="true" data-target="#<%=floor[i-1]%>">
+                            <%= floor[i-1] %>
+                                &nbsp Floor
+                        </div>
+                        <div class="col-3"></div>
+                    </div>
+
+                    <div id="<%=floor[i-1]%>" class="collapse" style="transition-duration: 1s;">
+                        <% for(var j=1;j<=18;j++){%>
+                            <% var room_no=i*100+j;%>
+
+
+
+
+
+
+                                <div class="row">
+                                    <div class="col-2 room">
+                                        <%= room_no %>
+                                    </div>
+                                    <% for(var k=0;k<5;k++){%>
+                                        <div class="col-2  ">
+                                            <a href="" target="_blank" ; class="">
+                                                <%= alpha[k] %>
+                                            </a>
+                                        </div>
+                                        <% } %>
+
+
+                                </div>
+                                <!-- <script>
+                                    new jQueryCollapse($("#<%=floor[i-1]%>"),{
+                                        open: function(){
+                                            this.transition-duration(2000);
+                                            // style="transition-duration: 2s;"
+                                        },
+                                        close: function(){
+                                            this.transition-duration(2);
+                                        }
+                                    });
+                                </script> -->
+
+                                <% }%>
+                               
+
+
+                    </div>
+
+
+
+                   
+                        </div>
+                        <%}%>
+                            <!-- <script>
+    document.getElementById("col-2").style.display=none;
+</script> -->
+
+
+
+                            <%- include("partials/mainfooter"); -%>
