@@ -4,7 +4,8 @@
   "description": "This is a group project for managing hostel.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev" : "nodemon app.js"
   },
   "author": "Saurabh Kumar Singh",
   "license": "ISC",
@@ -15,5 +16,9 @@
     "lodash": "^4.17.21",
     "mongod": "^2.0.0",
     "mongoose": "^6.2.8"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.0",
+    "nodemon": "^2.0.15"
   }
 }
