@@ -46,6 +46,9 @@ app.get("/suggestion",function(req,res){
 app.get("/login",function(req,res){
     res.render("login");
 })
+app.get("/apj",function(req,res){
+    res.render("apj");
+})
 // create a new user in database
 app.post("/login",async (req,res) =>{
     try{
