@@ -86,6 +86,9 @@ app.post("/signin",async (req,res) =>{
 app.get("/roomStatus",function(req,res){
     res.render("roomStatus");
 })
+app.get("/profile",function(req,res){
+    res.render("profile");
+})
 app.listen(3000, function() {
     console.log("Server started on port 3000");
 });
