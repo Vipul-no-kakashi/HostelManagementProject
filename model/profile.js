@@ -13,12 +13,18 @@ const profileSchema = new Schema({
     SecondaryEmail:{
         type: String,
         require: true,
+        unique: true,
     },
     MobNo:{
         type: String,
         require: true,
+        unique: true,
     },
-    B:{
+    Birthdate:{
+        type: Date,
+        require: true,
+    },
+    ResidentialAdress:{
         type: String,
         require: true,
     }
