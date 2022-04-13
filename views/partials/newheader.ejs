@@ -14,6 +14,51 @@
     <link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Teko:400,700" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        .dropbtn {
+          background-color: transparent;
+          color: white;
+          border: none;
+          cursor: pointer;
+        }
+        
+        .dropbtn:hover, .dropbtn:focus {
+        background: -webkit-linear-gradient(144deg, #5B42F3, #AF40FF 50%,#00DDEB );
+          color: white;
+          font-size: 18px;
+        }
+        
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+        
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: white;
+          min-width: 160px;
+          overflow: auto;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+        
+        .dropdown a:hover {
+            background: #E0E0E0;
+            
+            font-size: 16px !important;
+        }
+
+        .show {display: block;}
+    </style>
+
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
    
@@ -33,9 +78,21 @@
                     <li class="nav-item">
                         <a class="nav-link"  href="http://hostel.iiti.ac.in/docs/Hostel_Rules.pdf" target="_blank">Hall Rules</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#pricing">Facilities</a>
-                    </li>
+                    <div class="dropdown">
+                        <li class="nav-item">
+                            <a onclick="myFunction()" class="nav-link dropbtn" href="#pricing">Facilities</a>
+                            <div id="myDropdown" class="dropdown-content">
+                                <a href="#home">Health Centre</a>
+                                <a href="#about">Counselling Cell</a>
+                                <a href="#contact">Transport Booking</a>
+                                <a href="#contact">Green Vehicle Schedule</a>
+                                <a href="#contact">E-Payments</a>
+                                <a href="#contact">Campus Facilities</a>
+                                <a href="#contact">Campus Safety</a>
+                                <a href="#contact">Dining</a>
+                            </div>
+                        </li>
+                    </div>
                     <li class="nav-item">
                         <a class="nav-link" href="../gallery">Gallery</a>
                     </li>
