@@ -9,13 +9,55 @@ const profileSchema = new Schema({
     LastName:{
         type: String,
         require: true,
-        unique: true 
     },
-    
-    Password:{
+    SecondaryEmail:{
         type: String,
-        require: true
+        require: true,
+        unique: true,
+    },
+    MobNo:{
+        type: String,
+        require: true,
+        unique: true,
+    },
+    Birthdd:{
+        type: Date,
+        require: true,
+    },
+    Birthmm:{
+        type: Date,
+        require: true,
+    },
+    Birthyy:{
+        type: Date,
+        require: true,
+    },
+    ResidentialAdress:{
+        type: String,
+        require: true,
+    },
+    Course:{
+        type: String,
+        require: true,
+    },
+    Department:{
+        type: String,
+        require: true,
+    },
+    yearOfGraduation:{
+        type: String,
+        require: true,
+    },
+    Hostel:{
+        type: String,
+    },
+    Flatno:{
+        type: String,
+    },
+    RoomNo:{
+        type: String,
     }
+
 });
 
 module.exports = mongoose.model('profile', profileSchema);

@@ -6,7 +6,8 @@ const mongoose = require("mongoose");
 const app = express();
 require('dotenv').config();
 const connectDB = require('./DB/dbConn');
-const User = require('./model/User'); 
+const User = require('./model/User');
+const profile = require('./model/Profile'); 
 
 connectDB();
 // require("./db/conn");
@@ -84,6 +85,14 @@ app.post("/signin",async (req,res) =>{
             res.send("Email and Password are Not Maching");
         }
     }  
+
+})
+app.post("/profile",async (req,res) =>{
+    const a = new profile({
+        Name: req.body.Name,
+        Email: req.body.Email,
+        Password: password
+    }) 
 
 })
 app.get("/roomStatus",function(req,res){
