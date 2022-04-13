@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>form-v1 by Colorlib</title>
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+	<link rel="stylesheet" type="text/css" href="css/opensans-font.css">
+	<link rel="stylesheet" type="text/css" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+	<div class="page-content">
+		<div class="form-v1-content">
+			<div class="wizard-form">
+		        <form class="form-register" action="#" method="post">
+		        	<div id="form-total">
+		        		<!-- SECTION 1 -->
+			            <h2>
+			            	<p class="step-icon"><span>01</span></p>
+			            	<span class="step-text">Peronal Infomation</span>
+			            </h2>
+			            <section>
+			                <div class="inner">
+			                	<div class="wizard-header">
+									<h3 class="heading">Peronal Infomation</h3>
+									<p>Please enter your infomation and proceed to the next step so we can build your account.  </p>
+								</div>
+								<div class="form-row">
+									<div class="form-holder">
+										<fieldset>
+											<legend>First Name</legend>
+											<input type="text" class="form-control" id="first-name" name="first-name" placeholder="First Name" required>
+										</fieldset>
+									</div>
+									<div class="form-holder">
+										<fieldset>
+											<legend>Last Name</legend>
+											<input type="text" class="form-control" id="last-name" name="last-name" placeholder="Last Name" required>
+										</fieldset>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-holder form-holder-2">
+										<fieldset>
+											<legend>Secondary Email</legend>
+											<input type="text" name="your_email" id="your_email" class="form-control" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="example@email.com" required>
+										</fieldset>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-holder form-holder-2">
+										<fieldset>
+											<legend>Mobile Number</legend>
+											<input type="text" class="form-control" id="phone" name="phone" placeholder="+1 888-999-7777" required>
+										</fieldset>
+									</div>
+								</div>
+								<div class="form-row form-row-date">
+									<div class="form-holder form-holder-2">
+										<label class="special-label">Birth Date:</label>
+										<select name="month" id="month">
+											<option value="MM" disabled selected>MM</option>
+											<option value="15">16</option>
+											<option value="16">16</option>
+											<option value="17">17</option>
+											<option value="18">18</option>
+											<option value="19">19</option>
+											<option value="20">20</option>
+											<option value="21">21</option>
+											<option value="22">22</option>
+										</select>
+										<select name="date" id="date">
+											<option value="DD" disabled selected>DD</option>
+											<option value="Feb">Feb</option>
+											<option value="Mar">Mar</option>
+											<option value="Apr">Apr</option>
+											<option value="May">May</option>
+										</select>
+										<select name="year" id="year">
+											<option value="YYYY" disabled selected>YYYY</option>
+											<option value="2017">2017</option>
+											<option value="2016">2016</option>
+											<option value="2015">2015</option>
+											<option value="2014">2014</option>
+											<option value="2013">2013</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-holder form-holder-2">
+										<input type="text" class="form-control input-border" id="ssn" name="Place of residence" placeholder="Place of residence" required>
+									</div>
+								</div>
+							</div>
+			            </section>
+						<!-- SECTION 2 -->
+			            <h2>
+			            	<p class="step-icon"><span>02</span></p>
+			            	<span class="step-text">Department and H.O.R Details</span>
+			            </h2>
+			            <section>
+			                <div class="inner">
+			                	<div class="wizard-header">
+									<h3 class="heading">Department and H.O.R Details</h3>
+									<p>*Provide the H.O.R details only if you are already alloted with a H.O.R. Otherwise leave blank.</p>
+								</div>
+								<div class="form-row">
+									<div class="form-holder form-holder-2">
+										<select name="month" id="month">
+											<option value="MM" disabled selected>Course Type</option>
+											<option value="CSE">B.Tech</option>
+											<option value="CSE">M.Tech</option>
+											<option value="16">Phd</option>
+											<option value="16">M.Sc</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-row form-row-dept">
+									<div class="form-holder form-holder-2">
+										<select name="month" id="month">
+											<option value="MM" disabled selected>Department Name</option>
+											<option value="CSE">Computer Science Engineering</option>
+											<option value="CSE">Civil Engineering</option>
+											<option value="16">Electrial Engineering</option>
+											<option value="17">Mechanical Engineering</option>
+											<option value="18">Metallurgy Engineering Materials Science</option>
+											<option value="19">Chemistry</option>
+											<option value="20">Physics</option>
+											<option value="21">Mathematics</option>
+											<option value="22">Biosciences and Biomedical Engineering </option>
+											<option value="22">Astronomy</option>
+											<option value="22">Humanities and Social Sciences </option>
+										</select>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-holder form-holder-2">
+										<fieldset>
+											<legend>Year of Graduation</legend>
+											<input type="number" name="your_email" id="your_email" class="form-control" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="YYYY" required>
+										</fieldset>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-holder form-holder-2">
+										<label class="special-label">H.O.R Details:</label>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-holder form-holder-2">
+										<select name="month" id="month">
+											<option value="MM" disabled selected>Name of Hall of Residence</option>
+											<option value="CSE">A. P. J. ABDUL KALAM</option>
+											<option value="CSE">HOMI JAHANGIR BHABHA</option>
+											<option value="16">VIKRAM SARABHAI</option>
+											<option value="16">DEVI AHILYA</option>
+											<option value="16">C.V. RAMAN</option>
+											<option value="16">J C BOSE</option>
+										</select>
+									</div> 
+								</div>
+								<div class="form-row">
+									<div class="form-holder form-holder-1">
+										<fieldset>
+											<legend>Flat Number</legend>
+											<input type="number" name="your_email" id="your_email" class="form-control" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="000" required>
+										</fieldset>
+									</div>
+									<div class="form-holder form-holder-1">
+										<fieldset>
+											<legend>Room Alphabet</legend>
+											<input type="text" name="your_email" id="your_email" class="form-control" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="A" required>
+										</fieldset>
+									</div>
+								</div>
+							</div>
+			            </section>
+			            <!-- SECTION 3
+			            <h2>
+			            	<p class="step-icon"><span>03</span></p>
+			            	<span class="step-text">Set Financial Goals</span>
+			            </h2>
+			            <section>
+			                <div class="inner">
+			                	<div class="wizard-header">
+									<h3 class="heading">Set Financial Goals</h3>
+									<p>Please enter your infomation and proceed to the next step so we can build your accounts.</p>
+								</div>
+							</div>
+			            </section>-->
+		        	</div>
+		        </form>
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery.steps.js"></script>
+	<script src="js/main.js"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
