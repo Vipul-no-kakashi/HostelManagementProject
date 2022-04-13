@@ -61,7 +61,7 @@ app.post("/login",async (req,res) =>{
                 Password: password
             })
             const registered = await a.save();
-            res.status(201).send("");//kam baki hain
+            res.status(201).render("profile");
         }else{
             res.send("Password are Not Maching");
         }
@@ -76,7 +76,7 @@ app.post("/signin",async (req,res) =>{
     if (!foundUser) return res.sendStatus(401);
     else{
         if(foundUser.Password === password){
-            res.status(201).send("Sucess");
+            res.status(201).render("index");
         }else{
             res.send("Email and Password are Not Maching");
         }

@@ -9,12 +9,18 @@ const profileSchema = new Schema({
     LastName:{
         type: String,
         require: true,
-        unique: true 
     },
-    
-    Password:{
+    SecondaryEmail:{
         type: String,
-        require: true
+        require: true,
+    },
+    MobNo:{
+        type: String,
+        require: true,
+    },
+    B:{
+        type: String,
+        require: true,
     }
 });
 
