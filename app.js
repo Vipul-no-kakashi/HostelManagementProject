@@ -13,6 +13,7 @@ const Contact = require('./model/Contact');
 const Suggestion = require('./model/Suggestion');
 const alert= require('alert');
 const res = require("express/lib/response");
+// const XMLHttpRequest=require("XMLHttpRequest");
 
 // function upsert(db, doc, callback) {
 //     db.collection('flags').update({vid: doc.vid}, {$set: doc}, {upsert: true}, function(err) {
@@ -123,8 +124,12 @@ app.post("/signin",async (req,res) =>{
        
         
     });
+      
     
-    }
+        
+    };
+    
+    
     const foundUser = await User.findOne({Email : email}).exec();
     if (!foundUser){
        
