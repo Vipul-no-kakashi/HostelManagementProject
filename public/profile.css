@@ -144,7 +144,7 @@ button:focus {
     outline: none;
 }
 
-button.ghost {
+button.final {
     margin-top: 25px;
     background-color: transparent;
     border-color: #FFFFFF;

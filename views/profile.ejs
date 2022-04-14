@@ -1,239 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>form-v1 by Colorlib</title>
-	<!-- Mobile Specific Metas -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<!-- Font-->
-	<link rel="stylesheet" type="text/css" href="Profile_page/css/opensans-font.css">
-	<link rel="stylesheet" type="text/css" href="Profile_page/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
-	<!-- Main Style Css -->
-    <link rel="stylesheet" href="Profile_page/css/style.css"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/profile.css">
+    <script src="https://kit.fontawesome.com/965c30f03e.js" crossorigin="anonymous"></script>
 </head>
-<body style="background-image: url(Profile_page/Campus.jpg); background-repeat: no-repeat; background-size:cover;">
-	<div class="page-content">
-		<div class="form-v1-content">
-			<div class="wizard-form">
-		        <form class="form-register" action="#" method="post">
-		        	<div id="form-total">
-		        		<!-- SECTION 1 -->
-			            <h2>
-			            	<p class="step-icon"><span>01</span></p>
-			            	<span class="step-text">Peronal Infomation</span>
-			            </h2>
-			            <section>
-			                <div class="inner">
-			                	<div class="wizard-header">
-									<h3 class="heading">Peronal Infomation</h3>
-									<p>Please enter your infomation and proceed to the next step so we can build your account.  </p>
-								</div>
-								<div class="form-row">
-									<div class="form-holder">
-										<fieldset>
-											<legend>First Name</legend>
-											<input type="text" class="form-control" id="first-name" name="first-name" placeholder="First Name" required>
-										</fieldset>
-									</div>
-									<div class="form-holder">
-										<fieldset>
-											<legend>Last Name</legend>
-											<input type="text" class="form-control" id="last-name" name="last-name" placeholder="Last Name" required>
-										</fieldset>
-									</div>
-								</div>
-								<div class="form-row">
-									<div class="form-holder form-holder-2">
-										<fieldset>
-											<legend>Secondary Email</legend>
-											<input type="text" name="your_email" id="your_email" class="form-control" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="example@email.com" required>
-										</fieldset>
-									</div>
-								</div>
-								<div class="form-row">
-									<div class="form-holder form-holder-2">
-										<fieldset>
-											<legend>Mobile Number</legend>
-											<input type="text" class="form-control" id="phone" name="phone" placeholder="+1 888-999-7777" required>
-										</fieldset>
-									</div>
-								</div>
-								<div class="form-row form-row-date">
-									<div class="form-holder form-holder-2">
-										<label class="special-label">Birth Date:</label>
-										<select name="month" id="month" required>
-											<option value="MM" disabled selected>MM</option>
-											<option value="1">1</option>
-											<option value="2">2</option>
-											<option value="3">3</option>
-											<option value="4">4</option>
-											<option value="5">5</option>
-											<option value="6">6</option>
-											<option value="7">7</option>
-											<option value="8">8</option>
-											<option value="9">9</option>
-											<option value="10">10</option>
-											<option value="11">11</option>
-											<option value="12">12</option>
-											<option value="13">13</option>
-											<option value="14">14</option>
-											<option value="15">15</option>
-											<option value="16">16</option>
-											<option value="17">17</option>
-											<option value="18">18</option>
-											<option value="19">19</option>
-											<option value="20">20</option>
-											<option value="21">21</option>
-											<option value="22">22</option>
-											<option value="23">23</option>
-											<option value="24">24</option>
-											<option value="25">25</option>
-											<option value="26">26</option>
-											<option value="27">27</option>
-											<option value="28">28</option>
-											<option value="29">29</option>
-											<option value="30">30</option>
-											<option value="31">31</option>
-										</select>
-										<select name="date" id="date" required>
-											<option value="DD" disabled selected>DD</option>
-											<option value="Jan">Jan</option>
-											<option value="Feb">Feb</option>
-											<option value="Mar">Mar</option>
-											<option value="Apr">Apr</option>
-											<option value="May">May</option>
-											<option value="June">June</option>
-											<option value="July">July</option>
-											<option value="Aug">August</option>
-											<option value="Sept">September</option>
-											<option value="Oct">October</option>
-											<option value="Nov">November</option>
-											<option value="Dec">December</option>
+<body>
+    <div class = "big-img">
+        <div class = "content">
+                <div class="container" id="container">
+                <div class="form-container sign-in-container">
+                    <form action="/signin" method="POST">
+                        <input type="text" placeholder="Full Name" name="FullName" required/>
+                        <input type="text" placeholder="Department (ex: Computer Science)" name="Department" required/>
+                        <span class="spaceyr">Year of graduation</span>
+                        <input type="date" placeholder="Date" name="Department" required/>
+                        <span>Hostel details (if alloted)</span>
+                        <input type="text" placeholder="Hostel Name" name="HOR" required/>
+                        <input type="number" placeholder="Flat number" name="HORNumber" required/> 
+                        <button class="Finish">Finsih</button>
+                    </form>
+                </div>
+                <div class="overlay-container">
+                    <div class="overlay">
+                        <div class="overlay-panel overlay-right">
+                            <h1>Personal and Hall of Residence details.!</h1>
+                        </div>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </div>
 
-										</select>
-										<select name="year" id="year" required>
-											<option value="YYYY" disabled selected>YYYY</option>
-											<option value="1991">1991</option>
-											<option value="1992">1992</option>
-											<option value="1993">1993</option>
-											<option value="1994">1994</option>
-											<option value="1995">1995</option>
-											<option value="1996">1996</option>
-											<option value="1997">1997</option>
-											<option value="1998">1998</option>
-											<option value="1999">1999</option>
-											<option value="2000">2000</option>
-											<option value="2001">2001</option>
-											<option value="2002">2002</option>
-											<option value="2003">2003</option>
-											<option value="2004">2004</option>
-										</select>
-									</div>
-								</div>
-								<div class="form-row">
-									<div class="form-holder form-holder-2">
-										<input type="text" class="form-control input-border" id="ssn" name="Place of residence" placeholder="Place of residence" required>
-									</div>
-								</div>
-								<div class="submit-button">
-									<input type="submit" class="pbtm" value="NEXT">
-								</div>	
-							</div>
-			            </section>
-						<!-- SECTION 2 -->
-			            <h2>
-			            	<p class="step-icon"><span>02</span></p>
-			            	<span class="step-text">Department and H.O.R Details</span>
-			            </h2>
-			            <section>
-			                <div class="inner">
-			                	<div class="wizard-header">
-									<h3 class="heading">Department and H.O.R Details</h3>
-									<p>*Provide the H.O.R details only if you are already alloted with a H.O.R. Otherwise leave blank.</p>
-								</div>
-								<div class="form-row">
-									<div class="form-holder form-holder-2">
-										<select name="Course" id="month" required>
-											<option value="MM" disabled selected>Course Type</option>
-											<option value="B.tech">B.Tech</option>
-											<option value="M.tech">M.Tech</option>
-											<option value="Phd">Phd</option>
-											<option value="M.Sc">M.Sc</option>
-										</select>
-									</div>
-								</div>
-								<div class="form-row form-row-dept">
-									<div class="form-holder form-holder-2">
-										<select name="Department" id="month" required>
-											<option value="MM" disabled selected>Department Name</option>
-											<option value="CSE">Computer Science Engineering</option>
-											<option value="CE">Civil Engineering</option>
-											<option value="EE">Electrial Engineering</option>
-											<option value="ME">Mechanical Engineering</option>
-											<option value="MEMS">Metallurgy Engineering Materials Science</option>
-											<option value="Chemistry">Chemistry</option>
-											<option value="Physics">Physics</option>
-											<option value="Mathematics">Mathematics</option>
-											<option value="BSBE">Biosciences and Biomedical Engineering </option>
-											<option value="Astro">Astronomy</option>
-											<option value="Humanities">Humanities and Social Sciences </option>
-										</select>
-									</div>
-								</div>
-								<div class="form-row">
-									<div class="form-holder form-holder-2">
-										<fieldset>
-											<legend>Year of Graduation</legend>
-											<input type="number" name="your_email" id="your_email" class="form-control" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="YYYY" required>
-										</fieldset>
-									</div>
-								</div>
-								<div class="form-row">
-									<div class="form-holder form-holder-2">
-										<label class="special-label">H.O.R Details:</label>
-									</div>
-								</div>
-								<div class="form-row">
-									<div class="form-holder form-holder-2">
-										<select name="month" id="month" required>
-											<option value="MM" disabled selected>Name of Hall of Residence</option>
-											<option value="A. P. J. ABDUL KALAM">A. P. J. ABDUL KALAM</option>
-											<option value="HOMI JAHANGIR BHABHA">HOMI JAHANGIR BHABHA</option>
-											<option value="VIKRAM SARABHAI">VIKRAM SARABHAI</option>
-											<option value="DEVI AHILYA">DEVI AHILYA</option>
-											<option value="C.V. RAMAN">C.V. RAMAN</option>
-											<option value="J C BOSE">J C BOSE</option>
-										</select>
-									</div> 
-								</div>
-								<div class="form-row">
-									<div class="form-holder form-holder-1">
-										<fieldset>
-											<legend>Flat Number</legend>
-											<input type="number" name="your_email" id="your_email" class="form-control" placeholder="000" required>
-										</fieldset>
-									</div>
-									<div class="form-holder form-holder-1">
-										<fieldset>
-											<legend>Room Alphabet</legend>
-											<input type="text" name="your_email" id="your_email" class="form-control"  placeholder="A" required>
-										</fieldset>
-									</div>
-								</div>
-								<div class="submit-button">
-									<input type="submit" class="pbtm" value="NEXT">
-								</div>	
-							</div>
+    <script>
+        const signUpButton = document.getElementById('signUp');
+    const signInButton = document.getElementById('signIn');
+    const container = document.getElementById('container');
+    
+    signUpButton.addEventListener('click', () => {
+        container.classList.add("right-panel-active");
+    });
+    
+    signInButton.addEventListener('click', () => {
+        container.classList.remove("right-panel-active");
+    });
+    </script>
 
-			            </section>
-		        	</div>
-		        </form>
-			</div>
-		</div>
-	</div>
-	<script src="Profile_page/js/jquery-3.3.1.min.js"></script>
-	<script src="Profile_page/js/jquery.steps.js"></script>
-	<script src="Profile_page/js/main.js"></script>
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</body>
 </html>
 
