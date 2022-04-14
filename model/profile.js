@@ -2,62 +2,15 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
  
 const profileSchema = new Schema({
-    FirstName:{
-        type: String,
-        require: true
-    },
-    LastName:{
-        type: String,
-        require: true,
-    },
-    SecondaryEmail:{
-        type: String,
-        require: true,
-        unique: true,
-    },
-    MobNo:{
-        type: String,
-        require: true,
-        unique: true,
-    },
-    Birthdd:{
-        type: Date,
-        require: true,
-    },
-    Birthmm:{
-        type: Date,
-        require: true,
-    },
-    Birthyy:{
-        type: Date,
-        require: true,
-    },
-    ResidentialAdress:{
-        type: String,
-        require: true,
-    },
-    Course:{
-        type: String,
-        require: true,
+    Name:{
+        type: String
     },
     Department:{
-        type: String,
-        require: true,
+        type: String
     },
-    yearOfGraduation:{
-        type: String,
-        require: true,
-    },
-    Hostel:{
-        type: String,
-    },
-    Flatno:{
-        type: String,
-    },
-    RoomNo:{
-        type: String,
+    Year:{
+        type: Number
     }
-
 });
 
-module.exports = mongoose.model('profile', profileSchema);
+module.exports = mongoose.model('Profile', profileSchema);

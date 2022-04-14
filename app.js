@@ -7,7 +7,18 @@ const app = express();
 require('dotenv').config();
 const connectDB = require('./DB/dbConn');
 const User = require('./model/User');
-const profile = require('./model/Profile'); 
+const Profile = require('./model/Profile');
+const Complaint = require('./model/Complaint'); 
+const Contact = require('./model/Contact');
+const Suggestion = require('./model/Suggestion');
+
+// function upsert(db, doc, callback) {
+//     db.collection('flags').update({vid: doc.vid}, {$set: doc}, {upsert: true}, function(err) {
+//       db.collection('flags').update({vid: doc.vid, tmx: {$lt: doc.tmx}}, {$set: tmx: doc.tmx}, function(err) {
+//         callback();
+//       });
+//     });
+//   }
 
 connectDB();
 // require("./db/conn");
@@ -98,15 +109,45 @@ app.post("/signin",async (req,res) =>{
             res.send("Email and Password are Not Maching");
         }
     }  
-
 })
 app.post("/profile",async (req,res) =>{
-    const a = new profile({
-        Name: req.body.Name,
-        Email: req.body.Email,
-        Password: password
-    }) 
-
+    const a = new Profile({
+        Name: req.body.FullName,
+        Department: req.body.Department,
+        Year: req.body.Year
+    });
+    const ered = await a.save();
+    res.status(201).render("index");
+})
+app.post("/complaint",async (req,res) =>{
+    const a = new Complaint({
+        Email: req.body.email,
+        Mobno: req.body.mobno,
+        Subject: req.body.Subject,
+        Complaint: req.body.complaint
+    });
+    const rered = await a.save();
+    res.status(201).render("index");
+})
+app.post("/contact",async (req,res) =>{
+    const a = new Contact({
+        Email: req.body.email,
+        Mobno: req.body.mobno,
+        Topic: req.body.topic,
+        Message: req.body.message
+    });
+    const rered = await a.save();
+    res.status(201).render("index");
+})
+app.post("/suggestion",async (req,res) =>{
+    const a = new Suggestion({
+        Email: req.body.email,
+        Mobno: req.body.mobno,
+        Topic: req.body.topic,
+        Message: req.body.suggestion
+    });
+    const rered = await a.save();
+    res.status(201).render("index");
 })
 app.get("/roomStatus",function(req,res){
     res.render("roomStatus");
@@ -120,5 +161,5 @@ app.listen(3000, function() {
 
 mongoose.connection.once('open', () => {
     console.log('Connected to MongoDB');
-    app.listen(() => console.log(`Server running on port 30`));
+    app.listen(() => console.log(`Server running on port 3000`));
 });
