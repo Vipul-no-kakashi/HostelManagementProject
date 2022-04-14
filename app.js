@@ -11,6 +11,7 @@ const Prof = require('./model/Profile');
 const Complaint = require('./model/Complaint'); 
 const Contact = require('./model/Contact');
 const Suggestion = require('./model/Suggestion');
+const alert= require('alert');
 
 // function upsert(db, doc, callback) {
 //     db.collection('flags').update({vid: doc.vid}, {$set: doc}, {upsert: true}, function(err) {
@@ -91,7 +92,7 @@ app.post("/login",async (req,res) =>{
             const registered = await a.save();
             res.status(201).render("profile");//kam baki hain
         }else{
-            res.send("Password are Not Maching");
+            res.send("Password are Not Maching, <a href='/login'>Click Here </a>");
         }
     }catch(error){
         res.status(400).send(error);
@@ -103,12 +104,15 @@ app.post("/signin",async (req,res) =>{
     const email=req.body.Email;
     app.set('email',email);
     const foundUser = await User.findOne({Email : email}).exec();
-    if (!foundUser) return res.sendStatus(401);
+    if (!foundUser){
+       
+         return res.send("Invalid,   <a href='/login'>  click here</a>");
+    }
     else{
         if(foundUser.Password === password){
             res.status(201).render("index");
         }else{
-            res.send("Email and Password are Not Maching");
+            res.send("Email and Password are Not Maching, <a href='/login'>  click here</a>");
         }
     }  
 })
@@ -166,6 +170,7 @@ app.get("/admin",function(req,res){
     var c1=0,c2=0,c3=0;
     Complaint.find({},(err,data)=>{
         c1=data.length;
+        
        
         
     });
@@ -176,10 +181,12 @@ app.get("/admin",function(req,res){
     });
     Contact.find({},(err,data)=>{
         c2=data.length;
+        res.render("admin",{complains:c1,contacts:c2,suggestions:c3});
        
         
     });
-    res.render("admin",{complains:c1,contacts:c2,suggestions:c3});
+    
+    
     
 });
 
