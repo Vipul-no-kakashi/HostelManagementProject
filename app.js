@@ -7,7 +7,7 @@ const app = express();
 require('dotenv').config();
 const connectDB = require('./DB/dbConn');
 const User = require('./model/User');
-const Profile = require('./model/Profile');
+const Prof = require('./model/Profile');
 const Complaint = require('./model/Complaint'); 
 const Contact = require('./model/Contact');
 const Suggestion = require('./model/Suggestion');
@@ -98,8 +98,10 @@ app.post("/login",async (req,res) =>{
     }
 })
 app.post("/signin",async (req,res) =>{
-    const password=req.body.Password;
+    const password=req.body.Password
+    app.set('password',password);
     const email=req.body.Email;
+    app.set('email',email);
     const foundUser = await User.findOne({Email : email}).exec();
     if (!foundUser) return res.sendStatus(401);
     else{
@@ -111,10 +113,14 @@ app.post("/signin",async (req,res) =>{
     }  
 })
 app.post("/profile",async (req,res) =>{
-    const a = new Profile({
+    const a = new Prof({
         Name: req.body.FullName,
+        Email:req.app.get('email'),
+        Password:req.app.get('password'),
         Department: req.body.Department,
-        Year: req.body.Year
+        Year: req.body.Year,
+        Hostel:req.body.HOR,
+        Flatno:req.body.Roomno
     });
     const ered = await a.save();
     res.status(201).render("index");
@@ -124,7 +130,7 @@ app.post("/complaint",async (req,res) =>{
         Email: req.body.email,
         Mobno: req.body.mobno,
         Subject: req.body.Subject,
-        Complaint: req.body.complaint
+        Complaint: req.body.complaint,
     });
     const rered = await a.save();
     res.status(201).render("index");
@@ -154,6 +160,51 @@ app.get("/roomStatus",function(req,res){
 })
 app.get("/profile",function(req,res){
     res.render("profile");
+})
+
+app.get("/admin",function(req,res){
+    var c1=0,c2=0,c3=0;
+    Complaint.find({},(err,data)=>{
+        c1=data.length;
+       
+        
+    });
+    Suggestion.find({},(err,data)=>{
+        c3=data.length;
+       
+        
+    });
+    Contact.find({},(err,data)=>{
+        c2=data.length;
+       
+        
+    });
+    res.render("admin",{complains:c1,contacts:c2,suggestions:c3});
+    
+});
+
+app.get("/admincomplaint",function(req,res){
+    Complaint.find({},(err,data)=>{
+      
+        res.render("adminComplain",{ComplainData:data});
+    });
+    
+});
+
+app.get("/adminsuggestion",function(req,res){
+    Suggestion.find({},(err,data)=>{
+        
+        res.render("adminSuggestion",{RequiredData:data});
+    });
+    
+});
+
+app.get("/admincontact",function(req,res){
+    Contact.find({},(err,data)=>{
+        
+        res.render("adminContact",{RequiredData:data});
+    });
+    
 })
 app.listen(3000, function() {
     console.log("Server started on port 3000");
