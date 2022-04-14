@@ -50,6 +50,19 @@ app.get("/login",function(req,res){
 app.get("/apj",function(req,res){
     res.render("apj");
 })
+app.get("/cvr",function(req,res){
+    res.render("cvr");
+})
+app.get("/da",function(req,res){
+    res.render("da");
+})
+app.get("/hjb",function(req,res){
+    res.render("hjb");
+})
+app.get("/vsb",function(req,res){
+    res.render("vsb");
+})
+
 // create a new user in database
 app.post("/login",async (req,res) =>{
     try{

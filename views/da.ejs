@@ -1,5 +1,258 @@
-<%- include("partials/newheader"); -%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   
+    <title>Home</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Bootstrap + Rubic main styles -->
+    <!-- <link rel="stylesheet" href="/css/images.css">
+    <link rel="stylesheet" href="/css/booking.css"> -->
+	<link rel="stylesheet" href="assets/css/rubics.css">
+    <style>
+        .dropbtn {
+          background-color: transparent;
+          color: white;
+          border: none;
+          cursor: pointer;
+        }
+        
+        .dropbtn:hover, .dropbtn:focus {
+        background: -webkit-linear-gradient(144deg, #5B42F3, #AF40FF 50%,#00DDEB );
+          color: white;
+          font-size: 18px;
+        }
+        
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+        
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: white;
+          min-width: 160px;
+          overflow: auto;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+        
+        .dropdown a:hover {
+            background: #E0E0E0;
+            
+            font-size: 16px !important;
+        }
 
+        .show {display: block;}
+    </style>
+</head>
+<body>
+    <div data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <nav id="scrollspy" class="navbar page-navbar navbar-dark navbar-expand-md fixed-top" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="navbar-brand" href="/"><strong class="text-primary">IITI</strong><span class="text-light"> Hostels</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://hostel.iiti.ac.in/docs/Hostel_Rules.pdf" target="_blank">Hall Rules</a>
+                    </li>
+                    <div class="dropdown">
+                        <li class="nav-item">
+                            <a onclick="myFunction()" class="nav-link dropbtn" href="#pricing">Facilities</a>
+                            <div id="myDropdown" class="dropdown-content">
+                                <a href="#home">Health Centre</a>
+                                <a href="#about">Counselling Cell</a>
+                                <a href="#contact">Transport Booking</a>
+                                <a href="#contact">Green Vehicle Schedule</a>
+                                <a href="#contact">E-Payments</a>
+                                <a href="#contact">Campus Facilities</a>
+                                <a href="#contact">Campus Safety</a>
+                                <a href="#contact">Dining</a>
+                            </div>
+                        </li>
+                    </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/complaints">Complaints</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-dark shadow-none ml-md-4" href="/login">Log In</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<!-- ---------------------------------------------- -->
+
+    <div class="section">
+
+    <h1>DA</h1><br>
+            <h4 class="header-subtitle">Welcome to the Portal of Hall of Residences</h4>
+
+    <div class="video-container">
+        <div class="color-overlay"></div>
+        <video autoplay loop muted>
+            <source src="assets/video/hostel.mp4" type="video/mp4">
+        </video>
+    </div>
+
+</div>
+
+
+<div class="sectionsocialmedia social-wrapper" id="features">
+    <div class="container">
+        <div class="social-txt">
+            <h6 class="title">Social Media</h6>
+            <p class="subtitle">Youc can also reach out to us on these platforms.</p>
+        </div>
+        <div class="social-links">
+            <a href="javascript:void(0)" class="link"><i class="ti-facebook">Facebook</i></a>
+            <a href="javascript:void(0)" class="link"><i class="ti-twitter-alt">Twitter</i></a>
+            <a href="javascript:void(0)" class="link"><i class="ti-google">Gmail</i></a>
+        </div>
+    </div>
+</div>
+
+<section class="section">
+    <div class="container">
+        <div class="row justify-content-around">
+            <div class="col-lg-8" style="height: 750px;">
+                <div class="tabs-container">
+                    <div class="tab-content">
+                        <div>
+                            <img src="assets/imgs/da.png" alt="" class="center" style="width:50%;height:275px;">
+                        </div>
+                        <div class="tab-pane fade show active" id="pills-APJ">
+                            <h4 class="title">Devi Ahilya H.O.R</h4>
+                            <p>Devi Ahilya hostel is named after Maharani Ahilyabai Holkar. She was the Holkar Queen of the Maratha Malwa kingdom, India and was one of India's great women rulers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container" style="width:100%;height:600px;">
+        <img src="assets/imgs/devi.jpg" alt="" style="width:100%;height:600px;">    
+    </div>
+</section>
+
+<!-- </section>  -->
+<section class="section" id="review">
+    <div class="container text-center">
+        <h6 class="display-4 has-line">CHIEF WARDENS AND MANAGERS</h6>
+        <p class="mb-5 pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div class="row text-left">
+            <div class="col-md-4">
+                <div class="testmonial">
+                    <p class="description"><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, eaque, repellat. Corporis facilis reprehenderit, cupiditate.</i></p>
+                    <div class="media">
+                        <img class="mr-3" src="assets/imgs/charitha.jpg" width="60" alt="Generic placeholder image">
+                        <div class="media-body">
+                            <h6 class="title">Dr Charitha Cherugondi</h6>
+                            <p class="text-muted">Chief Warden</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testmonial">
+                    <p class="description"><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, eaque, repellat. Corporis facilis reprehenderit, cupiditate.</i></p>
+                    <div class="media">
+                        <img class="mr-3" src="assets/imgs/Reema.jpg" width="60" alt="Generic placeholder image">
+                        <div class="media-body">
+                            <h6 class="title">Mr. Reema Naidu</h6>
+                            <p class="text-muted">Junior Assistant</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testmonial">
+                    <p class="description"><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, eaque, repellat. Corporis facilis reprehenderit, cupiditate.</i></p>
+                    <div class="media">
+                        <img class="mr-3" src="assets/imgs/rny.jpg" width="60" alt="Generic placeholder image">
+                        <div class="media-body">
+                            <h6 class="title">Mr. Ram Narayan Yadav</h6>
+                            <p class="text-muted">Attendant</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- <section class="section has-img-bg text-center">
+    <div class="container">
+        <h6 class="display-3 has-line">WISH TO GIVE A SUGGESTION</h6>
+        <h5 class="mb-5 font-weight-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, itaque.</h5>
+        <button class="btn btn-outline-light btn-flat">POST SUGGESTION</button>
+    </div>
+</section> -->
+<section class="section" id="contact">
+    <div class="container text-center">
+        <h6 class="display-4 has-line">CONTACT US</h6>
+        <p class="mb-5 pb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+        <form>
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <div class="form-group pb-1">
+                        <input type="text" class="form-control" required placeholder="Name">
+                    </div>
+                    <div class="form-group pb-1">
+                        <input type="email" class="form-control" required placeholder="Email">
+                    </div>
+                    <div class="form-group ">
+                        <input type="text" class="form-control" placeholder="Subject">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <textarea name="" id="" cols="" rows="7" class="form-control" required placeholder="Message"></textarea>
+                </div>
+            </div>
+            <input type="submit" class="btn btn-primary btn-block" value="Send Message">
+        </form>
+    </div>
+</section>
+
+<footer class="footer py-4 bg-dark text-light"> 
+    <div class="container text-center">
+        <p class="mb-4 small">Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a href="https://www.iiti.ac.in/">IIT INDORE</a></p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/IIT-Indore-108781240868622/"  class="link"><i class="ti-facebook"></i></a>
+            <a href="https://twitter.com/iitiofficial?lang=en" class="link"><i class="ti-twitter-alt"></i></a>
+            <a href="javascript:void(0)" class="link"><i class="ti-google"></i></a>
+        </div>
+    </div>
+</footer>
 
 
 <%- include("partials/mainfooter"); -%>
