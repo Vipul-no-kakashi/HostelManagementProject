@@ -12,6 +12,7 @@ const Complaint = require('./model/Complaint');
 const Contact = require('./model/Contact');
 const Suggestion = require('./model/Suggestion');
 const alert= require('alert');
+const res = require("express/lib/response");
 
 // function upsert(db, doc, callback) {
 //     db.collection('flags').update({vid: doc.vid}, {$set: doc}, {upsert: true}, function(err) {
@@ -103,6 +104,27 @@ app.post("/signin",async (req,res) =>{
     app.set('password',password);
     const email=req.body.Email;
     app.set('email',email);
+    if(email==="admin@gmail.com" & password==="admin"){
+        var c1=0,c2=0,c3=0;
+    Complaint.find({},(err,data)=>{
+        c1=data.length;
+        
+       
+        
+    });
+    Suggestion.find({},(err,data)=>{
+        c3=data.length;
+       
+        
+    });
+    Contact.find({},(err,data)=>{
+        c2=data.length;
+        res.render("admin",{complains:c1,contacts:c2,suggestions:c3});
+       
+        
+    });
+    
+    }
     const foundUser = await User.findOne({Email : email}).exec();
     if (!foundUser){
        
