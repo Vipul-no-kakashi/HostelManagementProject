@@ -47,7 +47,23 @@
   --font-family-sans-serif: "Lato", sans-serif;
   --font-family-monospace: monospace;
 }
+.container:hover .has-line:after{
+  width: 250px;
+}
+img.hostelOnebyOne {
+  -webkit-filter: drop-shadow(7px 6px 1px rgba(206, 212, 218, 0.9));
+          filter: drop-shadow(7px 6px 1px rgba(91, 66, 243, 0.5));
+  width: 100%;
+  height: 400px;
+  display: block;
+  margin-top: 35px;
+  margin-left: auto;
+}
 
+img.hostelOnebyOne:hover {
+  -webkit-filter: drop-shadow(7px 6px 1px rgba(206, 212, 218, 0.9));
+  filter: drop-shadow(12px 12px 1px rgba(175, 64, 255, 0.5));
+}
 *,
 *::before,
 *::after {
