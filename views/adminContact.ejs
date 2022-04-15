@@ -22,7 +22,6 @@
 			<li><a href="/admincontact"><i class='bx bxs-chart icon' ></i> Contact</a></li>
 			<li><a href="/admincomplaint"><i class='bx bxs-chart icon' ></i> Complain</a></li>
 			<li><a href="/adminsuggestion"><i class='bx bxs-chart icon' ></i> Suggestions</a></li>
-		
 	</section>
 	
     <section id="content">
@@ -30,10 +29,11 @@
 			<a href="#" class="brand"><i class='bx bxs-smile icon'></i> Admin Dashboard</a>
 		</nav> 
 		
-		<main class="contact">
+		<main class="suggestion">
 			<% for(var i=0;i<RequiredData.length;i++){ %>
 			<div class="data">
 				<div class="content-data">
+					
 					<div class="head">
 						<div class="row">
 							<div class="col-2">
@@ -50,16 +50,16 @@
 								<%= RequiredData[i].Topic %>
 							</div>
 						</div>
-						<div class="row">
-							<div class="col-2">
-								<%= RequiredData[i].Message %>
-							</div>
-						</div>		
-					</div>		
+					</div>
+					<div class="below">
+						<div class="col-2">
+							<%= RequiredData[i].Message %>
+						</div>
+					</div>
 				</div>
-			</div>
-			<% } %>
-		</main>
+				<% } %>
+				
+				
 	</section>
 	
 

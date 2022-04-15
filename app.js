@@ -84,7 +84,10 @@ app.post("/login",async (req,res) =>{
         const cpassword=req.body.ConfirmPassword;
         const Email=req.body.Email;
         const duplicate = await User.findOne({ Email: Email}).exec();
-        if (duplicate) return res.sendStatus(409);
+        if (duplicate)
+        {
+            return res.send("Account already exist <a href='/login'>Click Here </a>");
+        } 
         if(cpassword===password){
             const a = new User({
                 Name: req.body.Name,
@@ -92,12 +95,12 @@ app.post("/login",async (req,res) =>{
                 Password: password
             })
             const registered = await a.save();
-            res.status(201).render("profile");//kam baki hain
+            res.status(201).render("profile");
         }else{
             res.send("Password are Not Maching, <a href='/login'>Click Here </a>");
         }
     }catch(error){
-        res.status(400).send(error);
+        res.status(400).send(error).redirect('/login');
     }
 })
 app.post("/signin",async (req,res) =>{
@@ -120,10 +123,12 @@ app.post("/signin",async (req,res) =>{
     });
     Contact.find({},(err,data)=>{
         c2=data.length;
-        res.render("admin",{complains:c1,contacts:c2,suggestions:c3});
+        
+        // res.render("admin",{complains:c1,contacts:c2,suggestions:c3});
        
         
     });
+    return res.send("To proceed,   <a href='/admin'>  click here</a>");
       
     
         
