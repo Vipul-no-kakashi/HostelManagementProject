@@ -28,6 +28,7 @@
 			<li><a href="/admincontact"><i class='bx bxs-chart icon'></i> Contact</a></li>
 			<li style="background:red;"><a href="/admincomplaint"><i class='bx bxs-chart icon'></i> Complaint</a></li>
 			<li><a href="/adminsuggestion"><i class='bx bxs-chart icon'></i> Suggestions</a></li>
+			<li style="background-color: blue; "><a href="/" style="color: white;"><i class='bx bxs-chart icon'></i> Log Out</a></li>
 
 
 	</section>
@@ -45,23 +46,23 @@
 						<div class="head">
 							<div class="row">
 								<div class="col-2">
-									<%= ComplainData[i].Email %>
+									Email: <%= ComplainData[i].Email %>
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-2">
-									<%= ComplainData[i].Mobno %>
+									Mobno: <%= ComplainData[i].Mobno %>
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-2">
-									<%= ComplainData[i].Subject %>
+									Subject: <%= ComplainData[i].Subject %>
 								</div>
 							</div>
 						</div>
 						<div class="below">
 							<div class="col-2">
-								<%= ComplainData[i].Complaint %>
+								Complaint: <%= ComplainData[i].Complaint %>
 							</div>
 						</div>
 					</div>

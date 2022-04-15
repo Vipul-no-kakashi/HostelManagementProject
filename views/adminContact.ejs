@@ -22,6 +22,7 @@
 			<li style="background:red;"><a href="/admincontact"><i class='bx bxs-chart icon' ></i> Contact</a></li>
 			<li><a href="/admincomplaint"><i class='bx bxs-chart icon' ></i> Complaint</a></li>
 			<li><a href="/adminsuggestion"><i class='bx bxs-chart icon' ></i> Suggestions</a></li>
+			<li style="background-color: blue; "><a href="/" style="color: white;"><i class='bx bxs-chart icon'></i> Log Out</a></li>
 	</section>
 	
     <section id="content">
@@ -37,23 +38,23 @@
 					<div class="head">
 						<div class="row">
 							<div class="col-2">
-								<%= RequiredData[i].Email %>
+							Email: 	<%= RequiredData[i].Email %>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-2">
-								<%= RequiredData[i].Mobno %>
+							Mobno:	<%= RequiredData[i].Mobno %>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-2">
-								<%= RequiredData[i].Topic %>
+								Topic: <%= RequiredData[i].Topic %>
 							</div>
 						</div>
 					</div>
 					<div class="below">
 						<div class="col-2">
-							<%= RequiredData[i].Message %>
+							Message: <%= RequiredData[i].Message %>
 						</div>
 					</div>
 				</div>
