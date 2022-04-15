@@ -16,13 +16,36 @@
     <title>Admin Dashboard</title>
 
     <style>
-        .imageClass{
-            width: 200px;
-            height: 200px;
-            background-color: white;
-            border-radius: 25px;
+        main .data {
+            display: flex;
+            grid-gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
+
+        .imageClass{
+            width: 500px;
+            height: 300px;
+            background-color: white;
+            border-radius: 25px;
+            text-align: center;
+            padding: 30px;
+        }
+
+       .mainImg{
+            border: 1px solid blue !important;
+            width: 140px;
+            height: 170px;
+        }
+
+        #piddet{
+            color: blue;
+            font-size: 20px;
+            padding-top: 15px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
 
     </style>
 
@@ -51,11 +74,21 @@
 
         <main>
             <div class="data">
+<<<<<<< HEAD
                 <div class="imageClass">
                     <img src="/assets/imgs/bg-img.jpg">
                     <p>Name: Main Admin</p>
                     <p>Email: admin@gmail.com</p>
+=======
+                <div class="dummy">
+                    <div class="imageClass">
+                        <img class="mainImg" src="/assets/imgs/Lalit_Borana.jpg" alt="No image">
+                        <p id="piddet">Name: Main Admin</p>
+                        <p id="piddet">Email: admin@gmail.com</p>
+                    </div>
+>>>>>>> 1d4c540b7cdbac26d85168ad3db54d09b663c12d
                 </div>
+
             </div>
     </section>
 
