@@ -229,6 +229,9 @@ app.get("/admincomplaint",function(req,res){
     });
     
 });
+app.get("/adminDetail",function(req,res){
+    res.render("adminDetails");
+})
 app.get("/adminProfile",function(req,res){
     Prof.find({},(err,data)=>{
       
