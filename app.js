@@ -109,25 +109,7 @@ app.post("/signin",async (req,res) =>{
     const email=req.body.Email;
     app.set('email',email);
     if(email==="admin@gmail.com" & password==="admin"){
-        var c1=0,c2=0,c3=0;
-    Complaint.find({},(err,data)=>{
-        c1=data.length;
-        
        
-        
-    });
-    Suggestion.find({},(err,data)=>{
-        c3=data.length;
-       
-        
-    });
-    Contact.find({},(err,data)=>{
-        c2=data.length;
-        
-        // res.render("admin",{complains:c1,contacts:c2,suggestions:c3});
-       
-        
-    });
     return res.send("To proceed,   <a href='/admin'>  click here</a>");
       
     
@@ -142,7 +124,15 @@ app.post("/signin",async (req,res) =>{
     }
     else{
         if(foundUser.Password === password){
-            res.status(201).render("index");
+            const foundUsers= await Prof.findOne({Email:email}).exec();
+            
+            const Name=foundUsers.Name;
+            const Emails=foundUsers.Email;
+            const Department=foundUsers.Department;
+            const Year=foundUsers.Year;
+            const Hostel=foundUsers.Hostel;
+            const Flatno=foundUsers.Flatno;
+            res.status(201).render("studentProfile",{Name:Name,Email:Emails,Department:Department,Year:Year,Hostel:Hostel,Flatno:Flatno});
         }else{
             res.send("Email and Password are Not Maching, <a href='/login'>  click here</a>");
         }
